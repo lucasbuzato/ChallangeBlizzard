@@ -6,6 +6,7 @@
   --color-white-100: rgba(255, 255, 255, 0.1);
   --color-black: #020203;
   --color-blue: #00aeff;
+  --color-grey:#828792;
 }
 
 html {
@@ -42,7 +43,9 @@ img {
 /* <---------Reset--------->*/
 
 
-
+.size{
+  font-size: 3rem;
+}
 
 
 
@@ -55,7 +58,10 @@ img {
   background-color: var(--color-blue);
   padding: 7px 2rem;
   border-radius: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
   & i {
     margin-left: 0px;
   }
@@ -326,5 +332,44 @@ img {
   background-image: url(../assets/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.info-lateral{
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  & h2{
+    font-size: 3rem;
+  }
+
+}
+#lembrete{
+  font-size: 1.2rem;
+  width: 75%;
+  color: var(--color-white);
+}
+.pspace{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+  & p{
+    color: var(--color-grey);
+  }
+}
+.app{
+  position: absolute;
+  top: 265rem;
+  right: 2rem;
+}
+.mini-app{
+  position: relative;
+  top: 16rem;
+  left: 7rem;
 }
 /* <---------Download--------->*/
