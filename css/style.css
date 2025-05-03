@@ -1,159 +1,421 @@
+/* <---------Reset--------->*/
 :root {
-    --font-body: "Poppins", sans-serif;
-    --r-gradient: radial-gradient(at top, rgba(2, 2, 3, 0) , rgba(2, 2, 3, 1) );
-    --color-white:#FFFFFF;
-    --color-white-100:rgba(255, 255, 255, 0.10);
-    --color-black:#020203;
-    --color-blue:#00AEFF;
+  --font-body: "Poppins", sans-serif;
+  --r-gradient: radial-gradient(at top, rgba(2, 2, 3, 0), rgba(2, 2, 3, 1));
+  --color-white: #ffffff;
+  --color-white-100: rgba(255, 255, 255, 0.1);
+  --color-black: #020203;
+  --color-blue: #00aeff;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
 }
 a {
-    text-decoration: none;
-    color: var(--color-white);
-
+  text-decoration: none;
+  color: var(--color-white);
 }
-i{
-    margin: 0px 10px;
+i {
+  margin: 0px 10px;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+/* <---------Reset--------->*/
+
+
+
+/* <---------Hero--------->*/
+.hero {
+  width: 100%;
+  min-height: 100dvh;
+  background-image: var(--r-gradient),
+    url(../assets/banner-hero/games/diablo-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
 
-.hero{
-    width: 100%;
-    min-height: 100dvh;
-    background-image:var(--r-gradient) , url(../assets/banner-hero/games/diablo-bg.png);
+.header-hero {
+  width: 100%;
+  min-height: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid 2px var(--color-white-100);
+}
+.hero-logo-ul {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+
+.content-hero {
+  width: 100%;
+  height: calc(100dvh - 10rem);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  color: var(--color-white);
+  & li {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+.entrar {
+  display: flex;
+  gap: 1rem;
+}
+.btn {
+  background-color: var(--color-blue);
+  padding: 7px 2rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  & i {
+    margin-left: 0px;
+  }
+}
+
+.btn-criar {
+  border: solid 1px var(--color-white);
+  padding: 6px 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+}
+
+.icon-games {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 10rem;
+  gap: 2rem;
+
+  & img {
+    width: 70%;
+  }
+}
+
+.trailer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 6rem;
+  gap: 15rem;
+  & img {
+    height: 20vh;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.hero-tittle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 32%;
+  justify-content: center;
+  padding-bottom: 10rem;
+  & h1 {
+    font-size: 6.4vmin;
+    font-weight: 700;
+  }
+}
+
+.btn-jogar {
+  background-color: var(--color-blue);
+  padding: 12px 3rem;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  align-self: flex-start;
+}
+/* <---------Hero--------->*/
+
+
+
+/* <---------Jogos Exclusivos--------->*/
+.jogos-exclusivos{
+width: 100%;
+min-height: 100dvh;
+background-color: var(--color-black);
+color: var(--color-white);
+padding: 8rem;
+}
+.header-jogos{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+.top{
+    margin-bottom: 1rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 13rem;
+    margin-right: 3rem;
+}
+.bottom{
+    margin-top: 2rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 6rem;
+
+    & a{
+        color: var(--color-blue);
+    }
+}
+
+.jogos-tittle{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-right:27rem ;
+
+    & h2 {
+        width: 10%;
+    }
+    & figure {
+        margin-left:7rem ;
+    }
+}
+.jogos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 22rem;
+    padding-top: 7rem;
+
+}
+.imgjogo-1{
+background-image: url(../assets/banner-hero/games/bg.png);
+width: 90%;
+height: 45vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50%;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 7rem;
+border-radius: 1rem;
+}
+
+.imgjogo-2{
+    background-image: url(../assets/banner-hero/games/bg-1.png);
+    width: 90%;
+    height: 45vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-}
-
-.header-hero{
-    width: 100%;
-    min-height: 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: solid 2px var(--color-white-100);
-
-}
-.hero-logo-ul{
-        display: flex;
-        align-items: center;
-        gap: 7rem;
-}
-.nav-menu{
-    display: flex;
-    gap: 2rem;
-    color: var(--color-white);
-    & li{
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
-}
-.entrar{
-    display: flex;
-    gap:1rem ;
-}
-.btn{
-    background-color: #00AEFF;
-    padding: 7px 2rem;
-    border-radius: 0.3rem;
-    font-size: 1.2rem;
-    & i{
-        margin-left: 0px;
-    }
-}
-
-.btn-criar{
-    border: solid 1px #FFFFFF;
-    padding: 6px 1.5rem;
-    font-size: 1.2rem;
-    border-radius: 0.3rem;
-}
-
-.content-hero{
-    width: 100%;
-    height: calc(100dvh - 10rem);
-    color: var(--color-white);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-
-  
-}
-.icon-games{
-    width: auto;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-left: 10rem;
-    gap: 2rem;
-
-    & img{
-        width: 70%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 7rem;
+    border-radius: 1rem;
     }
-}
-
-
-.trailer{
-    display: flex;
-    flex-direction: column;
-    margin-right:6rem ;
-    gap: 15rem;
-    & img{
-        height: 20vh;
-    }
-
-    & div{
+    .imgjogo-3{
+        background-image: url(../assets/banner-hero/games/bg-2.png);
+        width: 90%;
+        height: 45vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-    }
-}
+        justify-content: flex-end;
+        align-items: center;
+        padding: 7rem;
+        border-radius: 1rem;
+        }
+        .imgjogo-4{
+            background-image: url(../assets/banner-hero/games/bg-3.png);
+            width: 90%;
+            height: 45vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 7rem;
+            border-radius: 1rem;
+            }
+            .imgjogo-5{
+                background-image: url(../assets/banner-hero/games/bg-4.png);
+                width: 90%;
+                height: 45vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 7rem;
+                border-radius: 1rem;
+                }
+                .imgjogo-6{
+                    background-image: url(../assets/banner-hero/games/bg-5.png);
+                    width: 90%;
+                    height: 45vh;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 7rem;
+                    border-radius: 1rem;
+                    }
+                    .imgjogo-7{
+                        background-image: url(../assets/banner-hero/games/bg-6.png);
+                        width: 90%;
+                        height: 45vh;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 7rem;
+                        border-radius: 1rem;
+                        }
+                        .imgjogo-8{
+                            background-image: url(../assets/banner-hero/games/bg-7.png);
+                            width: 90%;
+                            height: 45vh;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            padding: 7rem;
+                            border-radius: 1rem;
+                            }
+                            .imgjogo-9{
+                                background-image: url(../assets/banner-hero/games/bg-8.png);
+                                width: 90%;
+                                height: 45vh;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                align-items: center;
+                                padding: 7rem;
+                                border-radius: 1rem;
+                                }.imgjogo-10{
+                                    background-image: url(../assets/banner-hero/games/bg-9.png);
+                                    width: 90%;
+                                    height: 45vh;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: 50%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    padding: 7rem;
+                                    border-radius: 1rem;
+                                    }
+                                    .imgjogo-11{
+                                        background-image: url(../assets/banner-hero/games/bg-10.png);
+                                        width: 90%;
+                                        height: 45vh;
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        padding: 7rem;
+                                        border-radius: 1rem;
+                                        }
+                                        .imgjogo-12{
+                                            height: 45vh;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: center;
+                                            padding: 7rem;
+                                            border-radius: 1rem ;
+                                            border: solid var(--color-white) 2px ;
+                                            margin-bottom: 8rem;
+                                            gap: 5rem;
 
-.hero-tittle{
+                                            & p {
+                                                font-size: 17px;
+                                                font-style: bold;
+                                            }
+                                            }
+
+.cardjogo{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    width: 32%;
-    justify-content: center;
-    padding-bottom: 10rem;
-    & h1{
-        font-size: 6.4vmin;
-        font-weight: 700;
-        
+    gap: 1rem;
+
+    & h4 {
+        margin-top: 1rem;
     }
- 
+}
+.tds-jogos{
+    display: flex;
+    flex-direction: column;
 }
 
-.btn-jogar{
-    background-color: #00AEFF;
-    padding: 12px 3rem;
-    border-radius: 0.3rem;
-    font-size: 1.4rem;
-    align-self: flex-start; 
+/* <---------Jogos Exclusivos--------->*/
+
+
+
+/* <---------Download--------->*/
+.download{
+    width: 100%;
+    min-height: 100dvh;
+    background-image: url(../assets/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
+/* <---------Download--------->*/
